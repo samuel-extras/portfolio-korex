@@ -1,20 +1,21 @@
 "use client";
 import * as React from "react";
-import useEmblaCarousel, {
-  type EmblaCarouselType as CarouselApi,
-  type EmblaOptionsType as CarouselOptions,
-  type EmblaPluginType as CarouselPlugin,
-} from "embla-carousel-react";
+import useEmblaCarousel from // type EmblaOptionsType as CarouselOptions, // type EmblaCarouselType as CarouselApi,
+// type EmblaPluginType as CarouselPlugin,UseEmblaCarouselType
+"embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 type CarouselProps = {
-  opts?: CarouselOptions;
-  plugins?: CarouselPlugin[];
+  // opts?: CarouselOptions ;
+  opts?: any;
+  // plugins?: CarouselPlugin[];
+  plugins?: any;
   orientation?: "horizontal" | "vertical";
-  setApi?: (api: CarouselApi) => void;
+  // setApi?: (api: CarouselApi) => void;
+  setApi?: (api: any) => void;
 };
 
 type CarouselContextProps = {
@@ -64,7 +65,7 @@ const Carousel = React.forwardRef<
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);
 
-    const onSelect = React.useCallback((api: CarouselApi) => {
+    const onSelect = React.useCallback((api: any) => {
       if (!api) {
         return;
       }
@@ -281,7 +282,7 @@ const CarouselNext = React.forwardRef<
 CarouselNext.displayName = "CarouselNext";
 
 export {
-  type CarouselApi,
+  // type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,

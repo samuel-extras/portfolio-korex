@@ -1,113 +1,121 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Korex from "../../public/korex.png";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import React from "react";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex min-h-scree n flex-col items-center justify-between px-8 py-24  lg:p-24">
+      <div className="z-10 max-w-6xl w-full flex flex-col md:flex-row items-center justify-between  text-sm ">
+        <div className="space-y-10">
+          <div className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit">
+            {" "}
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 19.5C16.1421 19.5 19.5 16.1421 19.5 12C19.5 7.85786 16.1421 4.5 12 4.5C7.85786 4.5 4.5 7.85786 4.5 12C4.5 16.1421 7.85786 19.5 12 19.5Z"
+                fill="#4ECB71"
+              />
+              <path
+                d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.4968 14.7838 21.3896 17.4527 19.4211 19.4211C17.4527 21.3896 14.7838 22.4968 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C20.9972 9.61391 20.0481 7.32634 18.3609 5.63911C16.6737 3.95189 14.3861 3.00278 12 3Z"
+                fill="#4ECB71"
+              />
+            </svg>
+            <p className="text-white text-xl font-normal font-sansation">
+              Available for new opportunities
+            </p>
+          </div>
+          <div>
+            <h1 className=" text-white text-5xl lg:text-6xl font-bold font-sansation ">
+              KOREDE BUSUYI
+            </h1>
+            <h4 className="text-white text-4xl lg:text-5xl font-normal font-sansation">
+              Product Manager
+            </h4>
+          </div>
+          <p className="text-white text-2xl lg:text-3xl font-normal font-sansation max-w-[40ch]">
+            If your product aspires to grow, distinguish itself and dominate the
+            market...let me be the catalyst.
+          </p>
+          <Collapsible
+            open={isOpen}
+            onOpenChange={setIsOpen}
+            className="flex flex-col sm:flex-row gap-4"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <CollapsibleTrigger asChild>
+              <Button className="bg-[#5E27B8] rounded-[20px] px-11 font-normal font-sansation">
+                Contact Me
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="space-y-4">
+              <div className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit">
+                {" "}
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0_68_25)">
+                    <path
+                      d="M16.484 12.476L22.635 7.132V17.759L16.484 12.476ZM8.558 13.381L10.718 15.256C11.057 15.544 11.499 15.718 11.982 15.718H11.999H12.012C12.496 15.718 12.938 15.543 13.281 15.253L13.278 15.255L15.438 13.38L22.004 19.019H1.995L8.558 13.381ZM1.986 5.865H22.016L12.395 14.221C12.2868 14.3066 12.1529 14.3531 12.015 14.353H12.001H11.988C11.8496 14.3532 11.7152 14.3063 11.607 14.22L11.608 14.221L1.986 5.865ZM1.365 7.131L7.515 12.475L1.365 17.755V7.131ZM22.965 4.69C22.725 4.57 22.443 4.5 22.144 4.5H1.859C1.56916 4.50007 1.28331 4.56751 1.024 4.697L1.035 4.692C0.724573 4.84511 0.463148 5.08198 0.280254 5.37585C0.0973606 5.66971 0.000287348 6.00887 0 6.355L0 18.527C0.000529404 19.0196 0.196452 19.4919 0.54478 19.8402C0.893108 20.1885 1.36539 20.3845 1.858 20.385H22.141C22.6336 20.3845 23.1059 20.1885 23.4542 19.8402C23.8025 19.4919 23.9985 19.0196 23.999 18.527V6.355C23.999 5.628 23.58 4.998 22.97 4.695L22.959 4.69H22.965Z"
+                      fill="#4ECB71"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_68_25">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p className="text-white text-xl font-normal font-['Sansation']">
+                  Korede@gmail.com{" "}
+                </p>
+              </div>
+              <div className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit">
+                {" "}
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.2753 4.05575C14.3008 3.96056 14.3447 3.87133 14.4047 3.79315C14.4647 3.71496 14.5394 3.64935 14.6248 3.60008C14.7101 3.5508 14.8043 3.51882 14.902 3.50596C14.9996 3.49309 15.0989 3.49961 15.1941 3.52512C16.5844 3.88789 17.853 4.61473 18.869 5.63078C19.8851 6.64684 20.6119 7.91538 20.9747 9.30575C21.0002 9.40092 21.0067 9.50018 20.9939 9.59786C20.981 9.69555 20.949 9.78974 20.8997 9.87506C20.8505 9.96039 20.7849 10.0352 20.7067 10.0951C20.6285 10.1551 20.5393 10.199 20.4441 10.2245C20.3807 10.2411 20.3155 10.2496 20.25 10.2498C20.0847 10.2498 19.9241 10.1952 19.793 10.0945C19.662 9.9938 19.5679 9.85263 19.5253 9.69293C19.2295 8.55792 18.6363 7.52235 17.8069 6.69296C16.9775 5.86356 15.9419 5.27036 14.8069 4.9745C14.7116 4.94914 14.6223 4.90525 14.544 4.84533C14.4657 4.78542 14.4 4.71066 14.3506 4.62533C14.3013 4.54 14.2692 4.44577 14.2563 4.34803C14.2433 4.2503 14.2498 4.15098 14.2753 4.05575ZM14.0569 7.9745C15.3497 8.3195 16.1803 9.15012 16.5253 10.4429C16.5679 10.6026 16.662 10.7438 16.793 10.8445C16.9241 10.9452 17.0847 10.9998 17.25 10.9998C17.3155 10.9996 17.3807 10.9911 17.4441 10.9745C17.5393 10.949 17.6285 10.9051 17.7067 10.8451C17.7849 10.7852 17.8505 10.7104 17.8997 10.6251C17.949 10.5397 17.981 10.4455 17.9939 10.3479C18.0067 10.2502 18.0002 10.1509 17.9747 10.0557C17.4947 8.2595 16.2403 7.00512 14.4441 6.52512C14.3489 6.4997 14.2497 6.49327 14.152 6.5062C14.0544 6.51913 13.9602 6.55117 13.8749 6.60049C13.7897 6.6498 13.7149 6.71543 13.655 6.79363C13.5951 6.87182 13.5512 6.96105 13.5258 7.05622C13.5004 7.15138 13.4939 7.25063 13.5069 7.34828C13.5198 7.44593 13.5518 7.54008 13.6012 7.62535C13.6505 7.71062 13.7161 7.78534 13.7943 7.84525C13.8725 7.90516 13.9617 7.94907 14.0569 7.9745ZM21.7388 16.9136C21.5716 18.1839 20.9477 19.35 19.9837 20.1939C19.0196 21.0379 17.7813 21.5021 16.5 21.4998C9.05626 21.4998 3.00001 15.4436 3.00001 7.99981C2.99771 6.71852 3.4619 5.48021 4.30588 4.51615C5.14986 3.55209 6.31592 2.92822 7.58626 2.76106C7.9075 2.72184 8.2328 2.78756 8.51362 2.94841C8.79444 3.10926 9.0157 3.35662 9.14438 3.65356L11.1244 8.07387V8.08512C11.2229 8.31242 11.2636 8.56059 11.2428 8.80744C11.222 9.0543 11.1404 9.29217 11.0053 9.49981C10.9884 9.52512 10.9706 9.54856 10.9519 9.572L9.00001 11.8857C9.7022 13.3126 11.1947 14.792 12.6403 15.4961L14.9222 13.5545C14.9446 13.5357 14.9681 13.5181 14.9925 13.502C15.2 13.3636 15.4387 13.2792 15.687 13.2562C15.9353 13.2333 16.1854 13.2727 16.4147 13.3707L16.4269 13.3764L20.8434 15.3554C21.1409 15.4837 21.3889 15.7047 21.5503 15.9856C21.7116 16.2664 21.7778 16.592 21.7388 16.9136ZM20.25 16.7261H20.2397L15.8334 14.7526L13.5506 16.6942C13.5285 16.7129 13.5053 16.7305 13.4813 16.7467C13.2654 16.8907 13.0159 16.9762 12.7571 16.995C12.4983 17.0137 12.239 16.965 12.0047 16.8536C10.2488 16.0051 8.49845 14.2679 7.64907 12.5307C7.5366 12.2981 7.48613 12.0404 7.50255 11.7825C7.51898 11.5246 7.60174 11.2754 7.74282 11.0589C7.75872 11.0335 7.77659 11.0093 7.79626 10.9867L9.75001 8.67012L7.78126 4.26387C7.78089 4.26013 7.78089 4.25636 7.78126 4.25262C6.87212 4.37122 6.03739 4.81715 5.43339 5.50692C4.8294 6.19669 4.49755 7.08297 4.50001 7.99981C4.50348 11.1813 5.76888 14.2316 8.01856 16.4813C10.2682 18.7309 13.3185 19.9963 16.5 19.9998C17.4163 20.003 18.3023 19.6723 18.9925 19.0696C19.6827 18.4669 20.1297 17.6335 20.25 16.7251V16.7261Z"
+                    fill="#4ECB71"
+                  />
+                </svg>
+                <p className="text-white text-xl font-normal font-['Sansation']">
+                  +234 703 359 9433{" "}
+                </p>
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+        </div>
+        <div className="w-full md:w-[30%] p-10 md:p-0">
+          <Image src={Korex} alt="Korede" />
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }

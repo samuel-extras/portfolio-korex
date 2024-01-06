@@ -16,7 +16,7 @@ export default function Home() {
     <main className="flex min-h-scree n flex-col items-center justify-between px-8 py-24  lg:p-24">
       <div className="z-10 max-w-6xl w-full flex flex-col md:flex-row items-center justify-between  text-sm ">
         <div className="space-y-10">
-          <div className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit">
+          <div className="bg-[#1E1E1E] rounded-[20px] px-4 md:px-7 flex py-2 items-center gap-4 md:gap-6 w-fit">
             {" "}
             <svg
               width="24"
@@ -34,19 +34,19 @@ export default function Home() {
                 fill="#4ECB71"
               />
             </svg>
-            <p className="text-white text-xl font-normal font-sansation">
+            <p className="text-white text-lg md:text-xl font-normal font-sansation">
               Available for new opportunities
             </p>
           </div>
           <div>
-            <h1 className=" text-white text-5xl lg:text-6xl font-bold font-sansation ">
+            <h1 className=" text-white text-4xl sm:text-5xl lg:text-6xl font-bold font-sansation ">
               KOREDE BUSUYI
             </h1>
-            <h4 className="text-white text-4xl lg:text-5xl font-normal font-sansation">
+            <h4 className="text-white text-3xl sm:text-4xl lg:text-5xl font-normal font-sansation">
               Product Manager
             </h4>
           </div>
-          <p className="text-white text-2xl lg:text-3xl font-normal font-sansation max-w-[40ch]">
+          <p className="text-white text-xl sm:text-2xl lg:text-3xl font-normal font-sansation max-w-[40ch]">
             If your product aspires to grow, distinguish itself and dominate the
             market...let me be the catalyst.
           </p>
@@ -61,7 +61,11 @@ export default function Home() {
               </Button>
             </CollapsibleTrigger>
             <CollapsibleContent className="space-y-4">
-              <div className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit">
+              <a
+                href="mailto:koredebusuyi.career@gmail.com"
+                target="_blank"
+                className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit"
+              >
                 {" "}
                 <svg
                   width="24"
@@ -87,11 +91,15 @@ export default function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-                <p className="text-white text-xl font-normal font-['Sansation']">
-                  Korede@gmail.com{" "}
+                <p className="text-white text-xl font-normal font-sansation">
+                  koredebusuyi.career@gmail.com{" "}
                 </p>
-              </div>
-              <div className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit">
+              </a>
+              <a
+                href="tel:+234 703 359 9433"
+                target="_blank"
+                className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit"
+              >
                 {" "}
                 <svg
                   width="24"
@@ -105,14 +113,14 @@ export default function Home() {
                     fill="#4ECB71"
                   />
                 </svg>
-                <p className="text-white text-xl font-normal font-['Sansation']">
+                <p className="text-white text-xl font-normal font-sansation">
                   +234 703 359 9433{" "}
                 </p>
-              </div>
+              </a>
             </CollapsibleContent>
           </Collapsible>
         </div>
-        <div className="w-full md:w-[30%] p-10 md:p-0">
+        <div className="w-full md:w-[30%] py-10 sm:p-10 md:p-0">
           <Image src={Korex} alt="Korede" />
         </div>
       </div>

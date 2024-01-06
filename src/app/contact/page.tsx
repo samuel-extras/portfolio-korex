@@ -41,14 +41,14 @@ export default function Home() {
                   </clipPath>
                 </defs>
               </svg>
-              <p className="text-white text-xl font-normal font-['Sansation']">
+              <p className="text-white text-xl font-normal font-sansation">
                 koredebusuyi.career@gmail.com{" "}
               </p>
             </a>
             <a
               href="tel:+234 703 359 9433"
-              className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit"
               target="_blank"
+              className="bg-[#1E1E1E] rounded-[20px] px-7 flex py-2 items-center gap-6 w-fit"
             >
               {" "}
               <svg
@@ -63,7 +63,7 @@ export default function Home() {
                   fill="#4ECB71"
                 />
               </svg>
-              <p className="text-white text-xl font-normal font-['Sansation']">
+              <p className="text-white text-xl font-normal font-sansation">
                 +234 703 359 9433{" "}
               </p>
             </a>

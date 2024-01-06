@@ -51,7 +51,7 @@ const PaginationLink = ({
         buttonVariants({
           variant: isActive ? "ghost" : "outline",
           size,
-          className: `rounded-full w-12 h-12 border-[#797979] text-white ${
+          className: `rounded-full w-9 h-9  sm:w-12 sm:h-12 border-[#797979] text-white ${
             isActive ? " bg-[#5E27B8]" : "bg-none"
           }`,
         }),
@@ -73,8 +73,23 @@ const PaginationPrevious = ({
     className={cn("", className)}
     {...props}
   >
-    <ChevronLeft className="h-4 w-4" />
-    {/* <span>Previous</span> */}
+    <svg
+      width="7"
+      height="12"
+      viewBox="0 0 7 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="rotate-180"
+    >
+      <path
+        d="M1 1L6 6L1 11"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+    <span className="sr-only">Previous</span>
   </PaginationLink>
 );
 PaginationPrevious.displayName = "PaginationPrevious";
@@ -89,8 +104,22 @@ const PaginationNext = ({
     className={cn("", className)}
     {...props}
   >
-    {/* <span>Next</span> */}
-    <ChevronRight className="h-4 w-4" />
+    <span className="sr-only">Next</span>
+    <svg
+      width="7"
+      height="12"
+      viewBox="0 0 7 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 1L6 6L1 11"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   </PaginationLink>
 );
 

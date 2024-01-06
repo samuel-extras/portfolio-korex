@@ -32,7 +32,7 @@ export function Header() {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <div className=" fixed top-8 right-10 md:hidden z-20">
+          <div className=" fixed top-8 right-10 md:hidden z-20 backdrop-blur-2xl rounded-lg p-2">
             <svg
               width="30px"
               height="30px"

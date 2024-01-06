@@ -10,7 +10,7 @@ export default function Home() {
             About Me
           </h2>
           <div>
-            <div className="md:w-[40%] float-left w-full p-10 md:p-0 md:pr-10">
+            <div className="md:w-[40%] float-left w-full py-10 md:p-0 md:pr-10">
               <Image src={Korex} alt="Korede" />
             </div>
             <p className=" text-white text-xl lg:text-2xl font-normal font-sansation leading-[35px] clear-right">

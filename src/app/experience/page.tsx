@@ -97,20 +97,20 @@ export default function Home() {
                 index != Number(i) ? " hidden" : " block"
               }`}
             >
-              <div className="flex justify-between items-center">
-                <p className="text-white text-lg lg:text-2xl font-bold font-sansation">
+              <div className="flex justify-between items-center flex-wrap gap-x-10">
+                <p className="text-white  text-lg md:text-xl lg:text-2xl font-bold font-sansation">
                   {experience.position}
                 </p>
-                <p className="text-white text-lg lg:text-2xl font-bold font-sansation">
+                <p className="text-white  text-lg md:text-xl lg:text-2xl font-bold font-sansation">
                   {experience.date}
                 </p>{" "}
               </div>
               <div>
                 <p className="my-4">
-                  <span className="text-white text-xl lg:text-2xl font-bold font-sansation">
+                  <span className="text-white text-lg md:text-xl lg:text-2xl font-bold font-sansation">
                     {experience.company}
                   </span>
-                  <span className="text-white text-xl lg:text-2xl font-normal font-sansation">
+                  <span className="text-white text-lg md:text-xl lg:text-2xl font-normal font-sansation">
                     {" "}
                     – {experience.location} - {experience.type}
                   </span>
@@ -135,7 +135,7 @@ export default function Home() {
                           fill="#4ECB71"
                         />
                       </svg>
-                      <p className="w-[1022px] text-white text-xl lg:text-2xl font-normal font-sansation">
+                      <p className="w-[1022px] text-white text-base md:text-lg lg:text-2xl font-normal font-sansation">
                         {desc}
                       </p>
                     </div>

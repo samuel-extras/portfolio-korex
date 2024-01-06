@@ -42,6 +42,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Header />
+      <div
+        className="fixed inset-x-0 top-24 -z-10 transform-gpu overflow-hidden blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-1/2 aspect-[600/600] w-[600px] -translate-x-1/2   bg-[#5E27B8] opacity-40   "
+          style={{
+            clipPath: "circle(50% at 50% 50%)",
+          }}
+        />
+      </div>{" "}
       <body className={sansation.className}>{children}</body>
       <Footer />
     </html>
